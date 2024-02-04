@@ -52,10 +52,13 @@ div.header6 {
 .image2 {
   width: 150px;
   margin-bottom: 10px;
-  position: relative;
-  bottom: 0%;
-  right: 0%;
-  margin: 0;
+  margin: 0 auto;
+  display: block;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+.image2:hover {
+    transform: scale(1.2);
+    filter: grayscale(50%);
 }
 .button {
   background-color: #d93434;
@@ -69,9 +72,13 @@ div.header6 {
   font-size: 16px;
   font-family: inherit;
   margin-right: 10px;
+  transition: filter 0.3s ease; /* Add a smooth transition effect for the filter property */
 }
 .button-container {
   text-align: center; /* Optional: Center the buttons horizontally */
+}
+.button:hover {
+    transform: scale(1.2);
 }
 .imagecaption1 {
   text-align: center;
@@ -80,6 +87,7 @@ div.header6 {
 .separator {
   border-top: 1px solid #000; /* Adjust the color and style as needed */
   margin-top: 20px; /* Adjust the margin to control the space between the separator and the content above */
+  clear: both;
 }
 
 .mid-section {
@@ -87,6 +95,7 @@ div.header6 {
 }
 .bottom-section {
   padding: 20px;
+  clear: both;
 }
 .best-viewed {
   display: block; /* Make the span a block-level element */
@@ -97,4 +106,32 @@ div.header6 {
 .end-section {
   text-align: center; /* Center the content horizontally */
   margin-top: 20px; /* Add space between sections */
+  clear: both;
+}
+.construct-icon {
+    display: block;
+    margin: 150px auto;
+}
+.blog-post {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    float: left; /* Add float left to make them floated elements */
+    width: 100%; /* Ensure each blog post takes the full width */}
+
+.clearfix::after {
+        content: "";
+        display: table;
+        clear: both; }
+.blog-post h2 {
+    color: #333;
+}
+
+.blog-post .date {
+    color: #777;
+    font-style: italic;
+}
+
+.blog-post .content {
+    margin-top: 10px;
 }
